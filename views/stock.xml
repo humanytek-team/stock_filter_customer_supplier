@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="stock_filter_customer_supplier_search">
+            <field name="name">stock.move.customer_supplier.search</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_search"/>
+            <field name="arch" type="xml">
+                <filter string="Today" position="after">
+                    <separator/>
+                    <filter name="customers"
+                            string="Customers"
+                            domain="[('picking_partner.customer', '=', True)]"/>
+                    <filter name="suppliers"
+                            string="Suppliers"
+                            domain="[('picking_partner.supplier', '=', True)]"/>
+                </filter>
+            </field>
+        </record>
+    </data>
+</openerp>
