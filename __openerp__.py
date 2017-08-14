@@ -24,8 +24,7 @@
     'author': 'Humanytek',
     'website': 'http://humanytek.com',
     'depends': [
-        'stock',
-        # 'stock_move_partner_info',  # odoomrp-utils
+        'stock_move_partner_info',  # odoomrp-utils
     ],
     'data': [
         'views/stock.xml',
