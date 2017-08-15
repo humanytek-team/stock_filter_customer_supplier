@@ -17,5 +17,16 @@
                 </filter>
             </field>
         </record>
+
+        <record id="stock_filter_customer_supplier_tree" model="ir.ui.view">
+            <field name="name">stock.customer_supplier.tree</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_tree"/>
+            <field name="arch" type="xml">
+                <field name="product_id" position="before">
+                    <field name="product_categ_id"/>
+                </field>
+            </field>
+        </record>
     </data>
 </openerp>

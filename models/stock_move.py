@@ -18,4 +18,12 @@
 #
 ##############################################################################
 
-from . import models
+from openerp import api, fields, models
+
+
+class StockMove(models.Model):
+    _inherit = 'stock.move'
+
+    product_categ_id = fields.Many2one(
+        related='product_id.categ_id',
+    )
