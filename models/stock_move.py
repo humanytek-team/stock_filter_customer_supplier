@@ -24,6 +24,19 @@ from openerp import api, fields, models
 class StockMove(models.Model):
     _inherit = 'stock.move'
 
-    product_categ_id = fields.Many2one(
-        related='product_id.categ_id',
+    product_categ_second_lvl = fields.Many2one(
+        comodel_name='product.category',
+        compute='_get_categ',
+        store=True,
     )
+    product_categ_second_lvl_char = fields.Char(
+        compute='_get_categ',
+    )
+
+    @api.one
+    @api.depends('product_id')
+    def _get_categ(self):
+        self.product_categ_second_lvl = self.product_id.categ_id
+        while self.product_categ_second_lvl.parent_id and self.product_categ_second_lvl.parent_id.parent_id:
+            self.product_categ_second_lvl = self.product_categ_second_lvl.parent_id
+        self.product_categ_second_lvl_char = self.product_categ_second_lvl.name

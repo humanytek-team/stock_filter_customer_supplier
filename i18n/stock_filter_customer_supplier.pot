@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-14 21:03+0000\n"
-"PO-Revision-Date: 2017-08-14 21:03+0000\n"
+"POT-Creation-Date: 2017-08-18 15:19+0000\n"
+"PO-Revision-Date: 2017-08-18 15:19+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,10 +17,35 @@ msgstr ""
 
 #. module: stock_filter_customer_supplier
 #: view:stock.move:stock_filter_customer_supplier.stock_filter_customer_supplier_search
+msgid "Category"
+msgstr ""
+
+#. module: stock_filter_customer_supplier
+#: view:stock.move:stock_filter_customer_supplier.stock_filter_customer_supplier_search
 msgid "Customers"
+msgstr ""
+
+#. module: stock_filter_customer_supplier
+#: field:stock.move,product_categ_second_lvl:0
+msgid "Product categ second lvl"
+msgstr ""
+
+#. module: stock_filter_customer_supplier
+#: field:stock.move,product_categ_second_lvl_char:0
+msgid "Product categ second lvl char"
+msgstr ""
+
+#. module: stock_filter_customer_supplier
+#: model:ir.model,name:stock_filter_customer_supplier.model_stock_move
+msgid "Stock Move"
 msgstr ""
 
 #. module: stock_filter_customer_supplier
 #: view:stock.move:stock_filter_customer_supplier.stock_filter_customer_supplier_search
 msgid "Suppliers"
+msgstr ""
+
+#. module: stock_filter_customer_supplier
+#: view:stock.move:stock_filter_customer_supplier.stock_filter_customer_supplier_search
+msgid "Today"
 msgstr ""
