@@ -6,7 +6,7 @@
             <field name="model">stock.move</field>
             <field name="inherit_id" ref="stock.view_move_search"/>
             <field name="arch" type="xml">
-                <filter string="Today" position="after">
+                <field name="product_id" position="before">
                     <separator/>
                     <filter name="customers"
                             string="Customers"
@@ -14,7 +14,7 @@
                     <filter name="suppliers"
                             string="Suppliers"
                             domain="[('picking_partner.supplier', '=', True)]"/>
-                </filter>
+                </field>
                 <filter name="groupby_date" position="after">
                     <filter name="group_by_categ" string="Category"
                         context="{'group_by': 'product_categ_second_lvl'}"/>

@@ -27,6 +27,7 @@ class StockMove(models.Model):
     product_categ_second_lvl = fields.Many2one(
         comodel_name='product.category',
         compute='_get_categ',
+        string='Category',
         store=True,
     )
     product_categ_second_lvl_char = fields.Char(
